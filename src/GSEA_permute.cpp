@@ -1,4 +1,7 @@
 #include <Rcpp.h>
+#include <algorithm> // For std::shuffle
+#include <random>    // For std::default_random_engine and std::random_device
+
 using namespace Rcpp;
 
 // [[Rcpp::export]]
@@ -37,8 +40,9 @@ NumericMatrix GSEA_permute(Rcpp::List GSDB, Rcpp::NumericVector stats_vector, in
     
       
       // Reorder the gene index
-      std::random_shuffle ( geneIndex.begin(), geneIndex.end() );
-      
+      // std::random_shuffle ( geneIndex.begin(), geneIndex.end() );
+      std::shuffle(geneIndex.begin(), geneIndex.end(), std::default_random_engine(std::random_device{}()));
+
       for ( int i=0; i<database.size(); ++i )
       {
         for ( int j=0;j<database[i].size(); ++j)
