@@ -40,7 +40,6 @@ NumericMatrix GSEA_permute(Rcpp::List GSDB, Rcpp::NumericVector stats_vector, in
     
       
       // Reorder the gene index
-      // std::random_shuffle ( geneIndex.begin(), geneIndex.end() );
       std::shuffle(geneIndex.begin(), geneIndex.end(), std::default_random_engine(std::random_device{}()));
 
       for ( int i=0; i<database.size(); ++i )
