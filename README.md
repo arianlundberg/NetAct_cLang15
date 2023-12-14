@@ -2,16 +2,18 @@
 # Issues with the original version written by Lu lab, addressed in this repo 
 Incompatibility with C++ version 15 arises because the random_shuffle function has been deprecated in C++ versions 13 and above.
 
-## NetAct 
-NetAct a computational platform for constructing core transcription-factor regulatory networks using both transcriptomics data and literature-based transcription factor-target databases. NetAct robustly infers the activities of regulators using target expression, constructs networks based on transcriptional activity, and integrates mathematical modeling for validation. 
-NetAct is licensed under the MIT License <https://github.com/lusystemsbio/NetAct/blob/master/LICENSE> 
-
-
 ### Installation:
 ```
 library(devtools)
 install_github("arianlundberg/NetAct_cLang15", dependencies=T)
 ```
+
+## NetAct 
+NetAct a computational platform for constructing core transcription-factor regulatory networks using both transcriptomics data and literature-based transcription factor-target databases. NetAct robustly infers the activities of regulators using target expression, constructs networks based on transcriptional activity, and integrates mathematical modeling for validation. 
+NetAct is licensed under the MIT License <https://github.com/lusystemsbio/NetAct/blob/master/LICENSE> 
+
+
+
 
 ### Authors:
 Kenong Su <Kenong.Su@Pennmedicine.upenn.edu>,
